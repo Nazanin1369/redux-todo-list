@@ -1,0 +1,90 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  width: 100%;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: flex-start;
+}
+.todo-container > h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.todo-inputter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+input {
+  padding: 15px 20px;
+  width: 100%;
+  line-height: 20px;
+  font-size: 14px;
+  color: grey;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.delete-btn {
+  color: grey;
+  width: 50px;
+  font-size: 16px;
+  /* padding: 5px; */
+  border: none;
+  background: none;
+  outline: none;
+  float: right;
+  display: none;
+}
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+.todo-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  color: gray;
+  font-size: 14px;
+  list-style: none;
+  background-color: white;
+  padding: 15px 20px;
+}
+li:hover {
+  cursor: pointer;
+}
+li:hover > .delete-btn {
+  display: block;
+}
+li:not(:last-child) {
+  border-bottom: 1px solic black;
+}
+
+li.complete {
+  text-decoration: line-through;
+  background-color: #e3fbe3;
+}
